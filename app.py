@@ -63,3 +63,60 @@ for x in range(4):
 
 for ch in "python":
     print(ch)
+
+
+# functions
+
+def greet(first, last):
+    # first and last are parameters of a function
+    print(f"Hello {first} {last}")
+
+
+greet('rahul', 'v')
+# rahul and v are arguments to the function
+
+# optional args
+
+
+def increment(number, by):
+    # optional args must come only after all positional paramerters.
+    return number + by
+
+
+print(increment(2, by=3))
+
+# xargs
+
+
+def multiply(*numbers):
+    # numbers is a tuple inside this function
+    product = 1
+    for num in numbers:
+        product *= num
+    return product
+
+
+print(multiply(1, 2, 3, 5))
+
+
+# xxargs
+def details(**det):
+    print(det)
+
+
+details(id=2, name="ra", branch='it')
+
+
+# data structures
+
+# lists
+numbers = list(range(20))
+reversed_nums = numbers[::-1]
+
+evens = numbers[::2]
+odds = numbers[1::2]
+
+print(odds)
+
+# unpacking
+first, second, *rest = numbers
